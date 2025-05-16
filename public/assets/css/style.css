@@ -1,0 +1,599 @@
+/**************************/
+/* HEADER */
+/**************************/
+
+.header {
+  background-color: #e2e8d8;
+  height: 9rem;
+  padding: 0 4.8rem;
+  padding-left: 0;
+  position: relative;
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 9999;
+}
+
+.logo {
+  height: 9rem;
+}
+
+/**************************/
+/* NAVIGATION */
+/**************************/
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 9rem;
+  background-color: #e2e8d8;
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+
+.nav__logo {
+  height: 9rem;
+  transition: all 0.3s;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.nav__item {
+  margin-left: 4rem;
+}
+
+.nav__link:link,
+.nav__link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+.nav__link:hover,
+.nav__link:active {
+  color: rgb(109, 140, 60);
+}
+
+.nav__link.nav-cta:link,
+.nav__link.nav-cta:visited {
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  color: #fff;
+  background-color: #6d8c3c;
+}
+
+.nav__link.nav-cta:hover,
+.nav__link.nav-cta:active {
+  background-color: #6d8c3c;
+}
+
+/* MOBILE */
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
+/**************************/
+/* HERO SECTION */
+/**************************/
+
+.section-hero {
+  background-image: linear-gradient(rgb(0, 0, 0, 0.3), rgb(0, 0, 0, 0.3)),
+    url("../../images/hero.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #fdf2e9;
+  padding: 4.8rem 0 9.6rem 0;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  margin-top: -9.6rem;
+  z-index: 0;
+  border: 1px solid black;
+}
+.hero {
+  max-width: 130rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.hero-heading-primary,   /* <h1> */
+.hero-heading-secondary, /* <h2> */
+.hero-heading-tertiary   /* <h3> */ {
+  font-weight: 700;
+  color: #a7ba8a;
+  letter-spacing: -0.5px;
+}
+
+.hero-heading-primary {
+  font-size: 4.4rem;
+  line-height: 1.3;
+  margin-bottom: 3.2rem;
+}
+
+.hero-heading-secondary {
+  font-size: 3.6rem;
+  line-height: 1.3;
+  margin-bottom: 6.4rem;
+}
+
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+/**************************/
+/* ΤΟ ΦΡΟΝΤΙΣΤΗΡΙΟ */
+/**************************/
+
+.frontistirio-description {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+.frontistirio-description li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+
+.frontistirio-description p {
+  margin-bottom: 1.8rem;
+}
+
+.frontistirio-img-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.frontistirio-img {
+  width: 60%;
+  border-radius: 1px;
+  /* z-index: 10; */
+}
+
+.frontistirio--icon {
+  flex: 0 0 2.4rem;
+  height: 2.4rem;
+  color: #6d8c3c;
+}
+
+/* ---------------------------------- */
+/* ΠΡΟΓΡΑΜΜΑΤΑ ΣΠΟΥΔΩΝ */
+/* ---------------------------------- */
+
+.section-programmata {
+  background-color: #e2e8d8;
+}
+
+.programmata__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 3.2rem;
+  row-gap: 4rem;
+}
+
+.programmata__item {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s;
+}
+
+.programmata__item:hover {
+  transform: scale(1.03);
+}
+
+.programmata__title {
+  padding: 1rem;
+  background-color: #627e36;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  line-height: 1.4;
+  letter-spacing: 0.6px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: white;
+}
+
+.programmata__content {
+  background-color: white;
+  padding: 1rem;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+/* ---------------------------------- */
+/* ΕΚΠΑΙΔΕΥΤΙΚΕΣ ΥΠΗΡΕΣΙΕΣ */
+/* ---------------------------------- */
+
+.services__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+  line-height: 1.4;
+}
+
+.services__img {
+  height: 8rem;
+  margin-bottom: 2rem;
+}
+
+.services__link:link,
+.services__link:visited {
+  font-size: 1.6rem;
+  color: #6d8c3c;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.services__link:hover,
+.services__link:active {
+  color: #161c0c;
+}
+
+/* ---------------------------------- */
+/* ΣΕΠ */
+/* ---------------------------------- */
+
+.section-sep {
+  background-color: #e2e8d8;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../../images/bg-sep.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  font-size: 1.8rem;
+  line-height: 1.8;
+  border: 1px solid white;
+}
+
+.sep-txt:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.sep-list li {
+  list-style: none;
+  display: flex;
+  align-items: start;
+  gap: 2rem;
+}
+
+.sep--icon {
+  flex: 0 0 4.4rem;
+  height: 6rem;
+  color: #b6c69e;
+}
+
+.sep-bottom {
+  margin-top: 3rem;
+}
+
+/* ---------------------------------- */
+/* ΔΗΜΟΤΙΚΟ */
+/* ---------------------------------- */
+
+.section-dimotiko {
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.3)
+    ),
+    url("../../images/primary.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  line-height: 3rem;
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+.section-dimotiko .container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.8rem;
+}
+
+.section-dimotiko ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-dimotiko li {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/**************************/
+/* CTA SECTION */
+/**************************/
+
+.cta {
+  background-color: #6d8c3c;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  border-radius: 11px;
+  overflow: hidden;
+}
+
+.cta-text-box {
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+}
+
+.cta .heading-secondary {
+  color: #f0f4ec;
+  margin-bottom: 3.2rem;
+}
+
+.cta-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3.2rem;
+}
+
+.cta-form label {
+  color: #f0f4ec;
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.cta-form input,
+.cta-form select,
+.cta-form textarea {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  background-color: #fdf2e9;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.cta-form textarea {
+  height: 20rem;
+}
+
+.cta-textarea {
+  grid-column: 1/ -1;
+}
+
+.cta-form input::placeholder {
+  color: #627e36;
+}
+
+.cta *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.6rem rgba(253, 242, 233, 0.5);
+}
+
+.form__message {
+  width: 100%;
+  font-size: 1.8rem;
+}
+
+.success {
+  background-color: #d3ddc5;
+  font-size: 1.8rem;
+  padding: 1.8rem;
+  border: 1px solid #6d8c3c;
+}
+
+.error {
+  background-color: red;
+  font-size: 1.8rem;
+  padding: 1.8rem;
+  border: 1px solid red;
+  color: red;
+}
+
+/* ---------------------------------- */
+/* FOOTER */
+/* ---------------------------------- */
+
+.footer {
+  background-color: #161c0c;
+  font-weight: 100;
+  padding: 6.4rem 0;
+}
+
+.footer-navbars {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-nav {
+  display: flex;
+  column-gap: 3rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #f0f4ec;
+  transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #a7ba8a;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 2.4rem;
+}
+
+.social-icon {
+  height: 2.4rem;
+  width: 2.4rem;
+}
+
+.footer-copyright {
+  color: #f0f4ec;
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 1.2rem;
+}
+
+/* ---------------------------------- */
+/* SLIDER */
+/* ---------------------------------- */
+
+.section-carousel {
+  /* top / right / bottom / left */
+  background-color: #e2e8d8;
+}
+
+.heading-carousel {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.slider {
+  max-width: 120rem;
+  height: 80rem;
+  margin: 0 auto;
+  position: relative;
+  /* IN THE END */
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 80rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* THIS creates the animation! */
+  transition: transform 1s;
+}
+
+.slide-img {
+  max-width: 120rem;
+  height: 80rem;
+  object-fit: cover;
+}
+
+.slider__btn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  border: none;
+  background: rgba(255, 255, 255, 0.7);
+  font-family: inherit;
+  color: #161c0c;
+  border-radius: 50%;
+  height: 6rem;
+  width: 6rem;
+  font-size: 3.8rem;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.slider__btn--left {
+  left: 6%;
+  transform: translate(-50%, -50%);
+}
+
+.slider__btn--right {
+  right: 6%;
+  transform: translate(50%, -50%);
+}
+
+.dots {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dots__dot {
+  border: none;
+  background-color: #99af77;
+  opacity: 0.7;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  margin-right: 1.75rem;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  /* Only necessary when overlying images */
+  /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
+}
+
+.dots__dot:last-child {
+  margin: 0;
+}
+
+.dots__dot--active {
+  /* background-color: #fff; */
+  background-color: #161c0c;
+  opacity: 1;
+}

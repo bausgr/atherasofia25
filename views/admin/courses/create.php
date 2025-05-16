@@ -1,0 +1,87 @@
+<?php include VIEW_PATH . '/admin/layouts/header.php';  ?>
+
+<?php include VIEW_PATH . '/admin/layouts/topnav.php'; ?>
+
+<?php include VIEW_PATH . '/admin/layouts/sidebar.php'; ?>
+
+<div class="container-fluid px-4">
+  <h1 class="mt-4">Courses - Μαθήματα</h1>
+  <ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">Courses - Μαθήματα</li>
+  </ol>
+
+  <?php
+  if (!empty($errors)) :
+  ?>
+  <div class="errors">
+    <ul>
+      <?php
+        foreach ($errors as $error) :
+        ?>
+      <li><?= $error ?></li>
+      <?php
+        endforeach; ?>
+    </ul>
+  </div>
+  <?php
+  endif;
+  ?>
+
+  <div class="card mb-4">
+    <div class="card-header">
+      <i class="fas fa-table me-1"></i>
+      Courses - Μαθήματα
+    </div>
+    <div class="card-body">
+      <form method="post" action="/admin/courses/create">
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input id="title" type="text" class="form-control" name="course[title]" value="<?= $title ?? '' ?>">
+        </div>
+        <div class="mb-3">
+          <label for="title" class="form-label">Curriculum - Τάξη</label>
+          <select name="course[curriculum_id]" class="form-select">
+            <?php foreach ($curriculum as $cur): ?>
+            <option value="<?= $cur['id'] ?>"><?= $cur['title'] ?></option>
+            <?php endforeach ?>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="ordered" class="form-label"># hours</label>
+          <select name="course[num_hours]" class="ordered-dropdown form-select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="title" class="form-label"># hours</label>
+          <input id="title" type="text" class="form-control" name="course[num_hours]" value="<?= $numHours ?? '' ?>">
+        </div>
+        <div class="mb-3">
+          <label for="ordered" class="form-label">Order</label>
+          <select name="course[ordered]" class="ordered-dropdown form-select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Add</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<?php include VIEW_PATH . '/admin/layouts/footer.php'; ?>
